@@ -426,7 +426,7 @@ class PyThrift:
     def __InsertMain(self):
         ret_str = '\n'
         ret_str += "if __name__ == '__main__':\n"
-        ret_str += "    oStub = py_%s(r'%s','10.133.145.103')\n"%(self.service_name, self.thrift_path)
+        ret_str += "    oStub = py_%s(r'%s','127.0.0.1')\n"%(self.service_name, self.thrift_path)
         ret_str += "    oIn = {}\n"
         ret_str += "    oOut = []\n"
         ret_str += "    RetCode = 0#oStub.xxx(oIn,oOut)\n"
@@ -527,7 +527,7 @@ class PyThrift:
 if __name__ == '__main__':
     trunk_dir = r'F:\Share\md_trunk\server'
     idl_dir = trunk_dir + r'\idl\user'
-    idl_file = idl_dir+r'\ao_user.thrift'
+    idl_file = idl_dir+r'\ao_uu.thrift'
     test = PyThrift(idl_file)
     #test.MakePyClass()
     test.MakePyTestFile()
